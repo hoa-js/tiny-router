@@ -2,7 +2,7 @@
 // Project: https://github.com/hoa-js/tiny-router
 // Definitions by: nswbmw
 
-import type { Hoa, HoaMiddleware } from 'hoa'
+import type { Hoa, HoaMiddleware, HoaExtension } from 'hoa'
 
 export type Method = 'options' | 'head' | 'get' | 'post' | 'put' | 'patch' | 'delete'
 
@@ -15,7 +15,7 @@ export interface TinyRouterOptions {
   trailing?: boolean
 }
 
-export declare function tinyRouter (options?: TinyRouterOptions): (app: Hoa) => void
+export declare function tinyRouter (options?: TinyRouterOptions): HoaExtension
 
 export default tinyRouter
 
